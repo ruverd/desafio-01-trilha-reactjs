@@ -16,10 +16,15 @@ export function TaskList() {
 
   function handleCreateNewTask() {
     const id = Math.random();
+    const title = newTaskTitle;
+
+    if(!title){
+      return;
+    }
 
     const newTask = {
       id,
-      title: newTaskTitle,
+      title,
       isComplete: false,
     }
 
